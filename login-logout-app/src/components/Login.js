@@ -21,7 +21,7 @@ const Login = ({ handleLogin }) => {
       <h1>Login</h1>
       {isLoginFailed && (
         <p style={{ color: 'red' }}>Login Unsuccessful</p>
-      )} {"Login Unsuccessful"}
+      )} {Login Unsuccessful}
       <form onSubmit={handleSubmit}>
         <label>
           Username:
@@ -48,3 +48,4 @@ const Login = ({ handleLogin }) => {
 };
 
 export default Login;
+
