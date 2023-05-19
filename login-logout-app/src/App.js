@@ -1,5 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import LoginUnsuccessful from './components/LoginUnsuccessful';
+
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
+  const handleBackToLogin = () => {
+    // Redirect back to the login page
+    window.location.href = '/';
+  };
 
   return (
     <div>
@@ -13,3 +31,6 @@ import './App.css';
       )}
     </div>
   );
+};
+
+export default App;
